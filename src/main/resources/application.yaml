@@ -1,0 +1,24 @@
+logging:
+  level:
+    ROOT: INFO
+
+server:
+  port: 8081
+
+spring:
+  application:
+    name: observability-playground
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+  sleuth:
+    otel:
+      config:
+        trace-id-ratio-based: 1.0
+    propagation:
+      type: B3
+

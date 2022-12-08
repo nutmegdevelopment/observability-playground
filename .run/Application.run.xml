@@ -1,0 +1,23 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+    <option name="ACTIVE_PROFILES" />
+    <envs>
+      <env name="OTEL_METRICS_EXPORTER" value="logging" />
+      <env name="OTEL_PROPAGATORS" value="b3" />
+      <env name="OTEL_SERVICE_NAME" value="SpringBootSleuthOtelZipkin" />
+      <env name="OTEL_TRACES_EXPORTER" value="zipkin" />
+    </envs>
+    <module name="SpringBootSleuthOTelZipkin" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="uk.co.nutmeg.Application" />
+    <option name="VM_PARAMETERS" value="-javaagent:vendor/otel/opentelemetry-javaagent.jar" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="uk.co.nutmeg.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
